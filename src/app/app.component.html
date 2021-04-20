@@ -1,3 +1,55 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-content>
+    <h1>Offline Test</h1>
+    <ion-row>
+      <ion-title>
+        NET STATUS
+        <ion-label [color]="colorNetEstatus">
+          {{ netStatus }}</ion-label
+        ></ion-title
+      >
+    </ion-row>
+
+    <ion-row>
+      <ion-col
+        ><ion-button expand="block" (click)="changeNetStatus(false)"
+          >Disable Net</ion-button
+        ></ion-col
+      >
+      <ion-col
+        ><ion-button expand="block" (click)="changeNetStatus(true)"
+          >Enable Net</ion-button
+        ></ion-col
+      >
+      <ion-col
+        ><ion-button expand="block" (click)="reload(true)"
+          >Restart</ion-button
+        ></ion-col
+      >
+    </ion-row>
+    <ion-list>
+      <ion-button (click)="addNumber()">Add Number</ion-button>
+      <ion-button (click)="getNumbers()">Update List</ion-button>
+      <ion-list-header> Numbers </ion-list-header>
+
+      <ion-item *ngFor="let item of numbers">
+        <ion-label>
+          <ion-row>
+            <ion-col><h2>Number</h2></ion-col>
+            <ion-col>
+              <ion-label>{{ item.data.n }}</ion-label>
+            </ion-col>
+            <ion-col>
+              <ion-button
+                size="small"
+                color="danger"
+                (click)="deleteNumber(item.id)"
+                ><ion-icon name="trash-outline"></ion-icon
+              ></ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
 </ion-app>

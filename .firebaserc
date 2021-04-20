@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "offline-test-65ef2": {
+      "hosting": {
+        "app": [
+          "offline-test-65ef2"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "offline-test-65ef2"
+  }
+}

@@ -1,5 +1,7 @@
 {
   "name": "persistence-bug",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
